@@ -1,0 +1,290 @@
+/*
+* Use border-box instead of content-box and remove all default margins
+*/
+/* 
+* Use px values instead of rem for margins & paddings as zooming/increated root em value leads to wasted space.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+}
+
+:root {
+  --color-primary-dark: burlywood;
+  --color-primary-light: papayawhip;
+
+  --color-secondary-light: #eee;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+
+  min-height: 100vh;
+
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+  font-size: 1rem;
+
+  background-color: var(--color-primary-light);
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+
+.gg-menu-left {
+  transform: scale(var(--ggs, 1));
+}
+.gg-menu-left,
+.gg-menu-left::after,
+.gg-menu-left::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 3px;
+  background: black;
+}
+.gg-menu-left::after,
+.gg-menu-left::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  width: 10px;
+}
+.gg-menu-left::after {
+  top: 6px;
+  width: 14px;
+}
+
+/* 
+* Mobile first design
+*/
+
+/* 
+* Header styling
+*/
+.skip-link {
+  width: 10rem;
+  margin-left: -5rem;
+
+  position: absolute;
+  top: 4px;
+  left: -100%;
+
+  font-size: 1rem;
+  text-align: center;
+}
+
+.skip-link:focus {
+  left: 50%;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  background-color: var(--color-primary-dark);
+}
+
+.header__link {
+  height: 100%;
+}
+
+.header__logo {
+  display: block;
+
+  height: 5rem;
+  width: auto;
+}
+
+.header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.4rem;
+}
+
+.header__nav-bar {
+  position: relative;
+  width: 3rem;
+}
+
+.header__nav-button {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+  padding: 0;
+
+  border: none;
+  border-bottom: 2px solid var(--color-primary-dark);
+
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+}
+
+.header__nav-button:hover,
+.header__nav-button:focus-within {
+  cursor: pointer;
+}
+
+.header__nav-menu {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  position: absolute;
+  top: 75%;
+  right: 0;
+  z-index: 10;
+
+  padding: 0;
+  width: 7rem;
+
+  transform-origin: top;
+  rotate: x 90deg;
+
+  list-style: none;
+
+  background-color: var(--color-primary-dark);
+}
+
+.header__nav-menu--open {
+  rotate: none;
+}
+
+.header__nav-item {
+  width: 100%;
+}
+
+.header__nav-link {
+  display: inline-block;
+
+  height: 100%;
+  width: 100%;
+  padding: 8px 8px;
+
+  text-decoration: none;
+
+  background-color: var(--color-primary-dark);
+  border-bottom: 1px solid var(--color-primary-dark);
+}
+
+.header__nav-link:hover,
+.header__nav-link:focus-within {
+  border-bottom: 1px solid black;
+
+  background-color: var(--color-primary-light);
+}
+
+/* 
+* Footer Styling
+*/
+
+.footer {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 16px;
+
+  margin-top: auto;
+
+  text-align: center;
+
+  background-color: var(--color-primary-dark);
+}
+
+.footer__link {
+  grid-column: span 12;
+
+  padding: 8px 8px;
+  width: 60%;
+  justify-self: center;
+
+  border-bottom: 1px solid var(--color-primary-dark);
+
+  text-decoration: none;
+}
+
+.footer__link:hover,
+.footer__link:focus-within {
+  border-bottom: 1px solid var(--color-primary-light);
+}
+
+.footer__copyright {
+  grid-column: span 12;
+
+  padding: 8px 8px;
+
+  font-size: 0.8rem;
+}
+
+/* 
+* Desktop design
+*/
+
+@media screen and (min-width: 44rem) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header__title {
+    flex-grow: 1;
+  }
+
+  .header__nav-bar {
+    width: 100%;
+    position: static;
+  }
+
+  .header__nav-button {
+    display: none;
+  }
+
+  .header__nav-menu {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    width: 100%;
+
+    position: static;
+
+    text-align: center;
+
+    rotate: none;
+  }
+
+  .header__nav-link {
+    padding: 4px;
+  }
+
+  .footer__link {
+    grid-column: span 3;
+
+    padding: 16px 0;
+  }
+}
+
+/* Transitions only when user has not set motion preference */
+
+@media (prefers-reduced-motion: no-preference) {
+  .header__nav-menu--open {
+    transition: rotate 0.5s;
+  }
+}

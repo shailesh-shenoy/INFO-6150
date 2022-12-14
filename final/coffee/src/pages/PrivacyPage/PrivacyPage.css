@@ -1,0 +1,23 @@
+.privacy-page {
+  min-height: 100%;
+  padding: 24px;
+
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.privacy-page__title {
+  padding: 24px 0;
+}
+
+.privacy-page__paragraph {
+  padding-bottom: 16px;
+
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 48rem) {
+  .privacy-page {
+    padding: 24px 64px;
+  }
+}

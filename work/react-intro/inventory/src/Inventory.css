@@ -1,0 +1,83 @@
+.inventory {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 30vw;
+  min-width: 25rem;
+  padding: 20px;
+}
+
+.inventory__title {
+  flex-basis: 100%;
+  margin: 16px;
+  margin-left: 33%;
+
+  font-size: 1.6rem;
+}
+
+.inventory__count {
+  margin: 0 8px;
+
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.inventory__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 2rem;
+  min-width: 2rem;
+
+  margin: 2px;
+  padding: 8px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  color: #fdf0d5;
+
+  cursor: pointer;
+}
+
+.inventory__button:disabled {
+  border: 1px solid gray;
+  background-color: lightgray;
+  color: black;
+}
+
+.inventory__subtract {
+  margin-left: 33%;
+
+  background-color: #c1121f;
+}
+
+.inventory__add {
+  background-color: #6a994e;
+}
+
+.inventory__reorder {
+  margin-left: 20px;
+
+  font-size: 1rem;
+
+  background-color: #fdf0d5;
+  color: #003049;
+
+  animation: fadeInAnimation ease 1.4s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

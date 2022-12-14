@@ -1,0 +1,70 @@
+.theories {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+
+  padding: 24px;
+}
+
+.theories__title {
+  grid-column: span 12;
+
+  font-size: 2rem;
+}
+.card {
+  grid-column: span 12;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  padding: 16px;
+
+  border-radius: 8px;
+
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+}
+
+.card:hover,
+.card:focus-within {
+  background-color: var(--color-secondary-light);
+}
+
+.card__image {
+  width: 95%;
+  height: auto;
+}
+
+.card__title {
+  padding: 8px;
+  width: 70%;
+
+  text-align: center;
+
+  border-bottom: 1px solid black;
+}
+
+.card__description {
+  align-self: flex-start;
+
+  padding: 16px 8px;
+
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.card__description:last-of-type {
+  margin-top: auto;
+}
+
+@media screen and (min-width: 44rem) {
+  .card {
+    grid-column: span 4;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition: background-color 1s;
+  }
+}

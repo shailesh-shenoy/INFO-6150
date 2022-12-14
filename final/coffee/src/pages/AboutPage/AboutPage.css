@@ -1,0 +1,27 @@
+.about-page {
+  min-height: 100%;
+  padding: 24px;
+
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+}
+
+.about-page__title {
+  padding: 24px 0;
+}
+
+.about-page__paragraph {
+  padding-bottom: 16px;
+
+  line-height: 1.6;
+}
+
+.about-page__title--secondary {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .about-page {
+    padding: 24px 64px;
+  }
+}

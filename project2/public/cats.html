@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Famous Internet Cats</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/cats.css" />
+    <script defer src="js/site.js"></script>
+    <script defer src="js/cats.js"></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="header">
+      <a href="/" class="header__link">
+        <img
+          src="http://placekitten.com/100/100?image=1"
+          alt=""
+          class="header__logo"
+        />
+      </a>
+      <h1 class="header__title">Famous Internet Cats</h1>
+      <nav class="header__nav-bar">
+        <button class="header__nav-button" aria-label="Navigation menu button">
+          <i class="gg-menu-left"></i>
+        </button>
+        <ul class="header__nav-menu">
+          <li class="header__nav-item">
+            <a href="/" class="header__nav-link" tabindex="-1">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="/cats.html" class="header__nav-link" tabindex="-1"
+              >Famous Cats</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a href="/events.html" class="header__nav-link" tabindex="-1"
+              >Cat Events</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" id="main-content">
+      <dialog class="modal">
+        <h2 class="modal__title">Subscribe to the Latest Mews!</h2>
+        <form action="/subscribe" method="post" class="modal__form form">
+          <label for="form__email" class="form__label">
+            Email:
+            <span aria-label="required" class="form__label-required">
+              * required</span
+            >
+          </label>
+          <input
+            type="text"
+            id="form__email"
+            name="email"
+            class="form__input"
+          />
+          <span class="form__error-message form__error-email"> </span>
+          <label for="form__confirm-email" class="form__label">
+            Confirm Email:
+            <span aria-label="required" class="form__label-required">
+              * required</span
+            >
+          </label>
+          <input
+            type="text"
+            id="form__confirm-email"
+            name="confirm-email"
+            class="form__input"
+          />
+          <span class="form__error-message form__error-confirm-email"></span>
+          <div class="form__button-container">
+            <button type="submit" class="form__button form__button--subscribe">
+              Subscribe
+            </button>
+            <button class="form__button form__button--cancel" type="button">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </dialog>
+      <section class="card">
+        <h2 class="card__title">Jorts</h2>
+        <img
+          src="http://placekitten.com/200/200?image=3"
+          alt="A dark kitten walking in the snow."
+          class="card__image"
+        />
+        <p class="card__description">
+          Dolor nulla repellendus quisquam optio in. In optio distinctio
+          doloremque
+        </p>
+        <p class="card__description">
+          Ipsum lorem sit
+          <button
+            class="card__link"
+            aria-label="Subscribe to Jorts' newsletter"
+          >
+            Subscribe
+          </button>
+          voluptate inventore.
+        </p>
+      </section>
+      <section class="card">
+        <h2 class="card__title">Jean</h2>
+        <img
+          src="http://placekitten.com/200/200?image=4"
+          alt="A yellow cat looking suspiciously at the camera."
+          class="card__image"
+        />
+        <p class="card__description">
+          Dolor nulla repellendus quisquam optio in. In optio distinctio
+          doloremque
+        </p>
+        <p class="card__description">
+          Ipsum lorem sit
+          <button
+            class="card__link"
+            aria-label="Subscribe to Jean's newsletter"
+          >
+            Subscribe
+          </button>
+          voluptate inventore.
+        </p>
+      </section>
+      <section class="card">
+        <h2 class="card__title">Maru</h2>
+        <img
+          src="http://placekitten.com/200/200?image=5"
+          alt="A cute kitten held by someone."
+          class="card__image"
+        />
+        <p class="card__description">
+          Dolor nulla repellendus quisquam optio in. In optio distinctio
+          doloremque
+        </p>
+        <p class="card__description">
+          Dolor nulla repellendus quisquam optio in. In optio distinctio
+          doloremque
+        </p>
+        <p class="card__description">
+          Ipsum lorem sit
+          <button
+            class="card__link"
+            aria-label="Subscribe to Maru's newsletter"
+          >
+            Subscribe
+          </button>
+          voluptate inventore.
+        </p>
+      </section>
+      <section class="card">
+        <h2 class="card__title">Nyancat</h2>
+        <img
+          src="http://placekitten.com/200/200?image=6"
+          alt="A cute kitten sniffing the kitchen counter."
+          class="card__image"
+        />
+        <p class="card__description">
+          Dolor nulla repellendus quisquam optio in. In optio distinctio
+          doloremque
+        </p>
+        <p class="card__description">
+          Ipsum lorem sit
+          <button
+            class="card__link"
+            aria-label="Subscribe to Nyancat's newsletter"
+          >
+            Subscribe
+          </button>
+          voluptate inventore.
+        </p>
+      </section>
+      <section class="card">
+        <h2 class="card__title">Grumpy Cat</h2>
+        <img
+          src="http://placekitten.com/200/200?image=7"
+          alt="A cute, puffy kitten looking at the camera."
+          class="card__image"
+        />
+        <p class="card__description">
+          Dolor nulla repellendus quisquam optio in. In optio distinctio
+          doloremque
+        </p>
+        <p class="card__description">
+          Ipsum lorem sit
+          <button
+            class="card__link"
+            aria-label="Subscribe to Grumpy Cat's newsletter"
+          >
+            Subscribe
+          </button>
+          voluptate inventore.
+        </p>
+      </section>
+      <section class="card">
+        <h2 class="card__title">Lil Bub</h2>
+        <img
+          src="http://placekitten.com/200/200?image=8"
+          alt="A furry cat looking curiously at something."
+          class="card__image"
+        />
+        <p class="card__description">
+          Dolor nulla repellendus quisquam optio in. In optio distinctio
+          doloremque
+        </p>
+        <p class="card__description">
+          Ipsum lorem sit
+          <button
+            class="card__link"
+            aria-label="Subscribe to Lil Bub's newsletter"
+          >
+            Subscribe
+          </button>
+          voluptate inventore.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="/privacy.html" class="footer__link">Privacy Policy</a>
+      <a href="/careers.html" class="footer__link">Work for Us</a>
+      <a href="/contact.html" class="footer__link">Contact Us</a>
+      <a href="/social.html" class="footer__link">Social Media</a>
+      <p class="footer__copyright">© 2022 shenoy.sh</p>
+    </footer>
+  </body>
+</html>

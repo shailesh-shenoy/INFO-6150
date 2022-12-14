@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__text">Registration Form</h1>
+    </header>
+    <main class="content">
+      <form action="/submit" method="post" class="form">
+        <label for="form__name" class="form__label"
+          >Name:
+          <span aria-label="required" class="form__label-required"
+            >*</span
+          ></label
+        >
+        <input
+          type="text"
+          id="form__name"
+          name="name"
+          class="form__input"
+          required
+        />
+        <label for="form__email" class="form__label"
+          >Email:
+          <span aria-label="required" class="form__label-required"
+            >*</span
+          ></label
+        >
+        <input
+          type="email"
+          id="form__email"
+          name="email"
+          class="form__input"
+          required
+        />
+        <label for="form__dropdown" class="form__label"
+          >Subscription Tier:
+          <span aria-label="required" class="form__label-required">*</span>
+        </label>
+        <select name="tier" id="form__dropdown" class="form__input" required>
+          <option value="">--Please select an option--</option>
+          <option value="1">Silver Tier</option>
+          <option value="2">Gold Tier</option>
+          <option value="3">Platinum Tier</option>
+        </select>
+        <label class="form__label form__label--checkbox">
+          <input
+            type="checkbox"
+            id="form__checkbox"
+            class="form__input form__input--checkbox"
+            name="annoy_me"
+            checked
+          />
+          <span class="form__checkbox-text"
+            >Do you want us to send you annoying emails?</span
+          >
+        </label>
+        <button
+          type="submit"
+          class="form__input form__input--button"
+          id="form__button"
+        >
+          Register
+        </button>
+      </form>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        We collect your data. Please read our
+        <a
+          href="https://timesofindia.indiatimes.com/readersblog/like-to-call-my-blog/digital-privacy-is-a-myth-44442/"
+          target="_blank"
+          class="footer__link"
+          >Privacy Policy</a
+        >
+      </p>
+      <p class="footer__copyright">© 2022 shenoy.sh</p>
+    </footer>
+  </body>
+</html>

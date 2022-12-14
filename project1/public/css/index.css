@@ -1,0 +1,125 @@
+/*
+* Main content styling
+*/
+
+.hero {
+  grid-column: span 12;
+
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+
+.hero__title {
+  padding: 16px;
+
+  position: absolute;
+  top: 0.5%;
+  left: 10%;
+  right: 40%;
+
+  font-size: 7vw;
+
+  color: whitesmoke;
+}
+
+.hero__description {
+  padding: 16px 24px;
+  margin: 16px;
+
+  position: relative;
+  top: -5%;
+  margin: 16px 5%;
+
+  border-radius: 8px;
+
+  font-size: 1.2rem;
+
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+
+  /* background-color: blanchedalmond; */
+}
+
+.card {
+  grid-column: span 4;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  margin: 0 5% 24px 5%;
+  padding: 16px;
+
+  border-radius: 8px;
+
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+}
+
+.card:hover,
+.card:focus-within {
+  background-color: var(--color-secondary-light);
+}
+
+.card__image {
+  width: 90%;
+  height: auto;
+}
+
+.card__title {
+  padding: 8px;
+  width: 70%;
+
+  text-align: center;
+
+  border-bottom: 1px solid black;
+}
+
+.card__description {
+  padding: 16px 8px;
+}
+
+.card__link {
+  margin-top: auto;
+  padding: 8px 24px;
+
+  text-decoration: none;
+
+  border-bottom: 2px solid var(--color-primary-dark);
+
+  color: var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+}
+
+.card__link:hover,
+.card__link:focus-within {
+  border-bottom: 2px solid var(--color-primary-dark);
+
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+}
+
+/* Mobile styling
+* Intentionally made the website desktop-first to compare the DX with mobile-first design
+* Bad idea, 2/10, would not recommend
+*/
+@media screen and (max-width: 50rem) {
+  .card {
+    grid-column: span 12;
+  }
+}
+
+/* Transitions only when user has not set motion preference */
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition: background-color 1s;
+  }
+
+  .card__link {
+    transition: background-color 0.4s, color 0.5s;
+  }
+}

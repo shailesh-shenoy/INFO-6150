@@ -1,0 +1,239 @@
+/*
+* Use border-box instead of content-box and remove all default margins
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: var(--secondary-light);
+}
+
+/* 
+* Remove font defaults from form elements
+ */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+* Header styling
+*/
+
+:root {
+  --primary-light: #ffe6f7;
+  --primary-dark: rebeccapurple;
+  --secondary-light: #fffaf0;
+  --secondary-dark: #191970;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  height: 3rem;
+
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.header__text {
+  flex-grow: 1;
+
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/*
+* Main styling
+*/
+
+.content {
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin: 40px 30px;
+
+  border: 1px solid var(--secondary-dark);
+  border-radius: 4px;
+
+  background-color: var(--primary-light);
+  color: var(--secondary-dark);
+}
+
+.form__label {
+  margin: 16px 10% 2px 10%;
+}
+
+.form__label:hover {
+  cursor: pointer;
+}
+
+.form__label-required {
+  color: red;
+}
+
+.form__label--checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form__input {
+  margin: 2px 10%;
+
+  border: 1.2px solid var(--primary-dark);
+  border-radius: 3px;
+}
+
+.form__error-message {
+  margin: 2px 10%;
+
+  display: block;
+
+  color: red;
+}
+
+.form__error-message--invisible {
+  display: none;
+}
+
+.form__input--checkbox {
+  margin-left: 0;
+  margin-right: 8px;
+  width: 1.1rem;
+}
+
+.form__input--button {
+  align-self: center;
+
+  margin: 16px 20%;
+  padding: 4px 16px;
+
+  border: 5px solid var(--primary-dark);
+
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.form__input--invalid {
+  border: 1.5px dashed red;
+}
+
+.form__input--button:hover {
+  cursor: pointer;
+  border: 1.2px solid var(--secondary-dark);
+
+  font-weight: 500;
+
+  background-color: var(--secondary-dark);
+  color: var(--secondary-light);
+}
+
+@media screen and (min-width: 40rem) {
+  .form {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .form__label {
+    grid-column: span 4;
+
+    margin: 8px;
+
+    text-align: right;
+  }
+
+  .form__label:nth-child(1) {
+    margin-top: 32px;
+  }
+
+  .form__label--checkbox {
+    grid-column: span 12;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .form__input {
+    margin: 8px;
+    grid-column: span 8;
+
+    width: 70%;
+  }
+
+  .form__error-message {
+    margin: 0 8px 8px 8px;
+
+    grid-column-start: 5;
+    grid-column-end: 12;
+
+    color: red;
+  }
+
+  .form__input:nth-child(2) {
+    margin-top: 32px;
+  }
+
+  .form__input--checkbox {
+    margin: 8px;
+    width: 1.1rem;
+  }
+
+  .form__input--button {
+    grid-column: span 12;
+    justify-self: center;
+
+    width: 8rem;
+    margin-bottom: 32px;
+  }
+}
+
+/*
+* Footer Styling
+*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  margin-top: auto;
+
+  font-size: 0.8rem;
+  text-align: center;
+
+  background-color: var(--primary-dark);
+  color: var(--secondary-light);
+}
+
+.footer__text {
+  padding: 8px 16px;
+}
+
+.footer__link {
+  color: var(--primary-light);
+}
+
+.footer__copyright {
+  padding: 8px;
+
+  text-align: center;
+}

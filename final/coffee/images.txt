@@ -1,0 +1,32 @@
+The following images were downloaded from unsplash under their free-to-use license:
+
+Home/Landing Page images
+1. https://unsplash.com/photos/XOhI_kW_TaM
+2. https://unsplash.com/photos/KQBVbtF68QE
+3. https://unsplash.com/photos/pMW4jzELQCw
+4. https://unsplash.com/photos/sXsS55jslzU
+
+History Page images
+1. https://unsplash.com/photos/XgxnIhfcS_M
+2. https://unsplash.com/photos/YSdROD-X5u4
+3. https://unsplash.com/photos/PFVTZSqIqn0
+4. https://unsplash.com/photos/IjnAc0vyqGs
+5. https://unsplash.com/photos/E4qmFIfZbs0
+6. https://unsplash.com/photos/QRkew0KwXSM
+
+Facts Page images: 
+1. https://unsplash.com/photos/jlNgRztzPXY
+2. https://unsplash.com/photos/PC5kB3fC1bM
+3. https://unsplash.com/photos/JVnLqWGWVzs
+4. https://unsplash.com/photos/GJogrGZxKJE
+5. https://unsplash.com/photos/FaXS_OQ68Q8
+6. https://unsplash.com/photos/WyxqQpyFNk8
+7. https://unsplash.com/photos/ZiJxSv-gvLU
+8. https://unsplash.com/photos/kQI9jxeoOBc
+9. https://unsplash.com/photos/_-uN7DbAE-o
+10. https://unsplash.com/photos/lq87UxGSiEQ
+11. https://unsplash.com/photos/XV2xdFNK65s
+12. https://unsplash.com/photos/M27LaPKLByc
+
+Used css.gg icons under their MIT free use license.
+

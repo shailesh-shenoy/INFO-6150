@@ -1,0 +1,12 @@
+Images used in this website:
+cat-card-1.jpeg  
+cat-card-3.jpeg           
+cat-index-hero.jpeg  
+cat-oreo.jpeg   
+temp.png
+cat-card-2.jpeg  
+cat-content-primary.jpeg  
+cat-logo.png         
+cat-simba.jpeg
+
+These images are owned/created by me and are free to use under MIT license, same as my code. 

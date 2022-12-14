@@ -1,0 +1,8 @@
+Following images were downloaded from unsplash under their custom (free-to-use) license:
+dog-card-1.jpg  
+dog-card-2.jpg  
+dog-card-3.jpg  
+dog-hero.jpg  
+
+Following image was created by me and are free to use under MIT license, just as my source code:
+logo.png

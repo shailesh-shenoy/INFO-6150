@@ -1,0 +1,184 @@
+/* 
+* Main Styling 
+*/
+/* 
+* Mobile-first Design
+*/
+
+:root {
+  --shadow-color: 34deg 40% 34%;
+  --shadow-elevation-low: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.31),
+    0px 1.1px 1.4px -0.8px hsl(var(--shadow-color) / 0.41),
+    -0.1px 2.6px 3.2px -1.7px hsl(var(--shadow-color) / 0.51);
+  --shadow-elevation-medium: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.33),
+    -0.1px 2.4px 3px -0.6px hsl(var(--shadow-color) / 0.4),
+    -0.2px 5.5px 6.9px -1.1px hsl(var(--shadow-color) / 0.48),
+    -0.4px 12.8px 15.9px -1.7px hsl(var(--shadow-color) / 0.56);
+  --shadow-elevation-high: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.3),
+    -0.2px 5.2px 6.5px -0.2px hsl(var(--shadow-color) / 0.34),
+    -0.3px 9.6px 12px -0.5px hsl(var(--shadow-color) / 0.37),
+    -0.5px 15.1px 18.8px -0.7px hsl(var(--shadow-color) / 0.41),
+    -0.7px 22.9px 28.5px -1px hsl(var(--shadow-color) / 0.45),
+    -1.1px 34.3px 42.7px -1.2px hsl(var(--shadow-color) / 0.48),
+    -1.6px 50.6px 63px -1.5px hsl(var(--shadow-color) / 0.52),
+    -2.4px 73.1px 91.1px -1.7px hsl(var(--shadow-color) / 0.55);
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+
+  grid-column: span 12;
+
+  padding: 16px;
+
+  border: 1px solid black;
+  border-radius: 16px;
+
+  background-color: var(--color-secondary-light);
+}
+
+.card:hover,
+.card:focus-within {
+  background-color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-dark);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.card__title {
+  margin-bottom: 16px;
+}
+
+.card__image {
+  width: 200px;
+  height: auto;
+}
+
+.card__description {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.card__link {
+  padding: 0;
+
+  cursor: pointer;
+
+  border: none;
+
+  text-decoration: underline;
+
+  color: blue;
+  background-color: inherit;
+}
+
+.modal {
+  margin: auto;
+  padding: 16px;
+  width: 70vw;
+  max-width: 480px;
+
+  border: 2px solid black;
+}
+
+.modal::backdrop {
+  background-color: black;
+  opacity: 0.6;
+}
+
+.modal__title {
+  margin: 16px 0;
+
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 1rem;
+}
+
+.form__label {
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.form__label:hover {
+  cursor: pointer;
+}
+
+.form__label-required {
+  font-style: italic;
+
+  color: red;
+}
+
+.form__input--invalid {
+  border: 1.2px dashed red;
+}
+
+.form__input:focus,
+.form__input:focus-visible {
+  border: 1px solid blue;
+}
+
+.form__error-message {
+  margin: 4px 0;
+
+  display: block;
+
+  font-style: italic;
+
+  color: red;
+}
+
+.form__button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  margin-top: 32px;
+}
+
+.form__button {
+  padding: 8px 8px;
+
+  cursor: pointer;
+
+  border-radius: 12px;
+
+  font-size: 1.2rem;
+}
+
+.form__button--subscribe {
+  background-color: lime;
+}
+
+.form__button--cancel {
+  background-color: #f28080;
+}
+/* 
+*Desktop styling 
+*/
+
+@media screen and (min-width: 44rem) {
+  .card {
+    grid-column: span 4;
+    align-items: center;
+  }
+}
+
+/* Transitions only when user has not set motion preference */
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition: background-color 1s, box-shadow 1.2s;
+  }
+}

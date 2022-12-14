@@ -1,0 +1,273 @@
+/*
+* Use border-box instead of content-box and remove all default margins
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+}
+
+:root {
+  --primary-light: #ffe6f7;
+  --primary-dark: rebeccapurple;
+  --secondary-light: #fffaf0;
+  --secondary-dark: #191970;
+
+  /*
+  * Used Josh W Comeau's CSS box shadow generator for the below box shadows
+  */
+  --shadow-color: 40deg 28% 47%;
+  --shadow-elevation-low: 0px 1px 1.2px hsl(var(--shadow-color) / 0.39),
+    0px 1.8px 2.2px -1px hsl(var(--shadow-color) / 0.45),
+    -0.1px 4.6px 5.5px -2px hsl(var(--shadow-color) / 0.52);
+  --shadow-elevation-medium: 0px 1px 1.2px hsl(var(--shadow-color) / 0.41),
+    -0.1px 4px 4.8px -0.7px hsl(var(--shadow-color) / 0.46),
+    -0.2px 9.8px 11.8px -1.3px hsl(var(--shadow-color) / 0.51),
+    -0.5px 23.2px 27.8px -2px hsl(var(--shadow-color) / 0.56);
+  --shadow-elevation-high: 0px 1px 1.2px hsl(var(--shadow-color) / 0.38),
+    -0.2px 8.8px 10.6px -0.3px hsl(var(--shadow-color) / 0.4),
+    -0.4px 16.4px 19.7px -0.6px hsl(var(--shadow-color) / 0.43),
+    -0.6px 26.3px 31.6px -0.9px hsl(var(--shadow-color) / 0.45),
+    -1px 40.8px 49px -1.1px hsl(var(--shadow-color) / 0.47),
+    -1.5px 62.2px 74.7px -1.4px hsl(var(--shadow-color) / 0.5),
+    -2.2px 92.9px 111.5px -1.7px hsl(var(--shadow-color) / 0.52),
+    -3.2px 135.2px 162.3px -2px hsl(var(--shadow-color) / 0.54);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*
+* Header styling
+*/
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: Verdana, sans-serif;
+}
+
+.header__logo {
+  display: block;
+
+  height: 3rem;
+  width: auto;
+}
+
+.header__text {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  height: 3rem;
+
+  font-size: 1.5rem;
+
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+.header__navbar {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  font-size: 1rem;
+  background-color: var(--secondary-light);
+  color: var(--primary-dark);
+}
+
+.header__navlink {
+  padding: 8px;
+  width: 100%;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.header__navlink:hover {
+  font-weight: 800;
+
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+/*
+* Main content styling
+*/
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px;
+
+  padding: 16px;
+
+  font-family: Georgia, serif;
+
+  background-color: var(--secondary-light);
+}
+
+.content__headline {
+  grid-column: span 12;
+
+  text-align: center;
+  font-size: 1.4rem;
+
+  color: var(--primary-dark);
+}
+
+.content__card {
+  grid-column: span 12;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 8px;
+  margin: 8px 0;
+
+  border-radius: 8px;
+
+  box-shadow: var(--shadow-elevation-low);
+
+  color: var(--secondary-dark);
+}
+
+.content__card--featured {
+  color: var(--primary-dark);
+}
+
+.content__card:hover {
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.content__card-title {
+  padding: 6px;
+
+  font-size: 1.2rem;
+
+  text-align: center;
+}
+
+.content__card-image {
+  display: block;
+
+  margin: 8px;
+  height: auto;
+  width: 80%;
+  max-width: 16rem;
+
+  border-radius: 4px;
+}
+
+.content__card-description {
+  padding: 4px;
+  margin: 4px;
+
+  font-size: 1rem;
+}
+
+.content__card-link {
+  display: block;
+
+  padding: 0.5rem 1rem;
+  margin: 4px;
+
+  border: 1px var(--secondary-dark) solid;
+  border-radius: 2px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.content__card-link--featured {
+  font-size: 1rem;
+
+  color: var(--primary-light);
+  background-color: var(--primary-dark);
+}
+
+.content__card-link:hover {
+  font-weight: 600;
+  font-size: 1rem;
+
+  background-color: var(--secondary-dark);
+  color: var(--secondary-light);
+}
+
+/*
+* Footer styling
+*/
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+
+  padding: 8px;
+  margin-top: auto;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.footer__link {
+  grid-column: span 2;
+
+  padding: 4px;
+
+  border-bottom: 2px solid var(--primary-light);
+
+  text-align: center;
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.footer__link:hover {
+  font-weight: 600;
+
+  border-bottom: 2px solid var(--secondary-dark);
+
+  color: var(--secondary-dark);
+}
+
+.footer__copyright {
+  grid-column: span 6;
+
+  padding: 4px;
+
+  font-style: italic;
+  text-align: center;
+}
+
+/*
+* Media queries for desktop styling
+*/
+@media screen and (min-width: 50em) {
+  .header__navbar {
+    flex-flow: row nowrap;
+  }
+
+  .content__card {
+    grid-column: span 4;
+  }
+}

@@ -1,0 +1,187 @@
+/* 
+* App, Header & Footer styling here
+ */
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  height: 3rem;
+
+  background-color: var(--color-primary-medium);
+}
+
+.header__logo {
+  padding: 4px;
+  height: 3rem;
+  width: auto;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.header__navbar {
+  position: relative;
+
+  height: 100%;
+}
+
+.navbar__menu-button {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  padding: 0 24px;
+
+  border: none;
+
+  cursor: pointer;
+
+  background-color: var(--color-primary-medium);
+  color: white;
+}
+
+.navbar__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+
+  width: 100vw;
+  padding: 4px;
+
+  list-style: none;
+
+  background-color: var(--color-primary-medium);
+
+  transform-origin: left top;
+  transform: scaleY(0);
+}
+
+.navbar__menu--open {
+  transform: scaleY(1);
+}
+
+.navbar__item {
+  width: 10rem;
+}
+
+.navbar__link {
+  display: inline-block;
+  width: 100%;
+  padding: 6px;
+
+  border-bottom: 2px solid var(--color-primary-medium);
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.navbar__link:hover {
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  margin-top: auto;
+
+  background-color: var(--color-primary-medium);
+}
+
+.footer__link {
+  display: inline-block;
+  grid-column: span 12;
+
+  padding: 8px;
+
+  text-decoration: none;
+  text-align: center;
+
+  color: inherit;
+}
+
+.footer__link:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.footer__copyright {
+  grid-column: span 12;
+
+  padding: 8px;
+
+  text-align: center;
+}
+
+/* 
+* Desktop styling
+*/
+
+@media screen and (min-width: 44rem) {
+  .navbar {
+    position: static;
+  }
+
+  .navbar__menu-button {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: auto;
+    height: 100%;
+
+    position: static;
+
+    transform: none;
+  }
+
+  .navbar__item {
+    width: 6rem;
+
+    text-align: center;
+  }
+
+  .footer__link {
+    grid-column: span 4;
+  }
+}
+
+/* Transitions only when user has not set motion preference */
+
+@media (prefers-reduced-motion: no-preference) {
+  .navbar__menu {
+    transition: transform 0.5s ease-in-out;
+  }
+}

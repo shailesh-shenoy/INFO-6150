@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global-styles.css" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <title>Register for the Super Secret Cat Club!</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="header__link"
+        ><img src="/images/cat-logo.png" alt="" class="header__logo"
+      /></a>
+      <h1 class="header__title">Cats and Sleep</h1>
+      <nav class="header__navbar">
+        <span class="header__nav-menu-icon"><i class="gg-menu-left"></i></span>
+        <nav class="header__nav-menu">
+          <a href="/" class="header__nav-link">Home</a>
+          <a href="/register.html" class="header__nav-link">Register</a>
+          <a href="/about.html" class="header__nav-link">About</a>
+        </nav>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="hero">
+        <h2 class="hero__title">Register for the Super Secret Cat Club!</h2>
+        <p class="hero__description">
+          The Super Secret Cat Club (S.S.C.C.) is a for-profit organization
+          where we reel you in with cute cat pictures and collect your data for
+          totally ethical reasons! Please fill out the following registration
+          form and gain exclusive entry to the S.S.C.C. You will hear from us
+          soon via email once your application is processed.
+        </p>
+      </section>
+      <form action="/register" method="POST" class="registration-form">
+        <h3 class="registration-form__title">Registration Form</h3>
+        <label for="input-name" class="registration-form__label">
+          Name:
+          <span class="registration-form__label-required" aria-label="required"
+            >*</span
+          >
+        </label>
+        <input
+          type="text"
+          name="name"
+          id="input-name"
+          class="registration-form__input"
+          required
+        />
+        <label for="input-email" class="registration-form__label">
+          Email:
+          <span class="registration-form__label-required" aria-label="required"
+            >*</span
+          >
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="input-email"
+          class="registration-form__input"
+          required
+        />
+        <label for="input-select" class="registration-form__label">
+          Who is the cutest cat in the world:
+          <span class="registration-form__label-required" aria-label="required"
+            >*</span
+          >
+        </label>
+        <select
+          name="cutest"
+          id="input-select"
+          class="registration-form__input registration-form__input--dropdown"
+          required
+        >
+          <option value="Undecided" class="registration-form__option">
+            Undecided
+          </option>
+          <option value="Oreo" class="registration-form__option">Oreo</option>
+          <option value="Simba" class="registration-form__option">Simba</option>
+        </select>
+        <label
+          class="registration-form__label registration-form__label--checkbox"
+        >
+          <input
+            type="checkbox"
+            class="registration-form__input registration-form__input--checkbox"
+            name="email_subscription"
+            checked
+          />
+          <span class="registration-form__checkbox-text"
+            >Receive unsolicited emails boasting cute cat pictures</span
+          >
+        </label>
+        <button type="submit" class="registration-form__button">
+          Register
+        </button>
+      </form>
+    </main>
+    <footer class="footer">
+      <a href="/" class="footer__link">Home</a>
+      <a href="/about.html" class="footer__link">About</a>
+      <a href="/register.html" class="footer__link">Register</a>
+      <a href="/privacy.html" class="footer__link">Privacy Policy</a>
+      <p class="footer__copyright">© 2022 shenoy.sh</p>
+    </footer>
+  </body>
+</html>
